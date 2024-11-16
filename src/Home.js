@@ -7,7 +7,7 @@ const Home = () => {
 
   const fetchLogs = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/email_logs");
+      const response = await fetch("https://email-scheduling-and-sending-backend.onrender.com/email_logs");
       const result = await response.json();
       setLogs(result);
     } catch (error) {
@@ -32,7 +32,7 @@ const Home = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/upload", {
+      const response = await fetch("https://email-scheduling-and-sending-backend.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
@@ -66,7 +66,7 @@ const Home = () => {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/send_emails", {
+      const response = await fetch("https://email-scheduling-and-sending-backend.onrender.com/send_emails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -90,7 +90,7 @@ const Home = () => {
     const scheduleTime = document.getElementById("scheduleTime").value;
     const formattedScheduleTime = scheduleTime.replace("T", " ") + ":00";
     try {
-      const response = await fetch("http://127.0.0.1:5000/schedule_emails", {
+      const response = await fetch("https://email-scheduling-and-sending-backend.onrender.com/schedule_emails", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ schedule_time: scheduleTime }),
