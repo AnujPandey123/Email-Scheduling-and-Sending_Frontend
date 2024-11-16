@@ -1,70 +1,97 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Email Sending Dashboard (Frontend)
 
-## Available Scripts
+## Objective:
+The frontend of this project provides a user-friendly dashboard to interact with the backend for:
+1. Uploading CSV files.
+2. Customizing and scheduling emails.
+3. Viewing email logs and the status of sent emails.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Technologies Used:
+- **React** (UI Framework)
+- **CSS** (for styling)
+- **Axios** (for API requests)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Setup Instructions
 
-### `npm test`
+### 1. Clone the repository:
+```bash
+git clone https://github.com/your-repo/email-sender-frontend.git
+cd email-sender-frontend
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+### 3. Start the development server:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The frontend will be available at: `http://localhost:3000/`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+1. **Upload Data Section:**
+   - Users can upload a CSV file containing email addresses and other details.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Email Customization Section:**
+   - Users can define the subject, body template, and personalized prompt for email customization.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Send Emails Section:**
+   - Allows users to send emails immediately after customizing them.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Schedule Emails Section:**
+   - Allows users to schedule emails to be sent at a later time.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. **Email Logs Section:**
+   - Displays a list of all sent emails with their status, timestamp, and other details.
 
-## Learn More
+6. **Status Messages:**
+   - Shows success or error messages based on user actions.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Running with Docker (Optional)
 
-### Code Splitting
+### 1. Build the Docker image:
+```bash
+docker build -t email-sender-frontend .
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Run the container:
+```bash
+docker run -p 3000:3000 email-sender-frontend
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Backend Configuration
 
-### Making a Progressive Web App
+- Make sure that your frontend is configured to send API requests to the correct backend URL (i.e., `http://127.0.0.1:5000/` or the respective deployed URL).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## How the App Works:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Upload CSV:** The user uploads a CSV file with the necessary data (email addresses, names, etc.).
+- **Email Customization:** The user can provide an email subject, body, and prompt to personalize the email content.
+- **Send Emails:** Once the emails are customized, the user can send the emails immediately using the API.
+- **Schedule Emails:** The user can set a future time to send emails using the backend scheduling functionality.
+- **Logs:** All actions (sent emails, scheduling) are logged and accessible in the logs section of the dashboard.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contribution
 
-### `npm run build` fails to minify
+Feel free to contribute to this project by submitting issues or pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
