@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f6ff; /* Off-white with a lavender tint */
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures full height coverage */
+    overflow-y: auto; /* Allows scrolling for smaller screens */
+}
+
+.container {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 600px; /* Maximum width for larger screens */
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for a modern look */
+    text-align: center;
+    margin: 20px auto; /* Prevents top cutoff on small screens */
+}
+
+h1 {
+    color: #5a4ca7; /* Deep lavender for headings */
+    margin-bottom: 20px;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+input[type="file"],
+input[type="text"],
+textarea,
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f4f3fa; /* Light lavender background for inputs */
+    font-size: 14px;
+    color: #333;
+    transition: border 0.3s;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #7c67d9; /* Lavender button for file upload */
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #6b5bc1; /* Slightly darker lavender for hover */
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid #7c67d9; /* Lavender border on focus */
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7c67d9; /* Lavender for buttons */
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6b5bc1; /* Slightly darker lavender for hover */
+}
+
+#status {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f4f3fa; /* Light lavender for status box */
+    border-radius: 8px;
+    text-align: left;
+}
+
+#status h2 {
+    margin: 0;
+    color: #5a4ca7; /* Deep lavender for headings */
+}
+
+#statusText {
+    margin: 10px 0 0;
+    color: #666;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+/* Overall Margin Adjustments */
+.section > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* Media Query for Small Screens */
+@media (max-height: 700px) {
+    .container {
+        margin: 10px; /* Adds more margin for smaller viewports */
+        padding: 20px; /* Reduce padding to fit content */
+    }
+
+    h1 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    button {
+        padding: 10px 20px; /* Reduce button size for smaller screens */
+    }
+}
+/* Footer Styles */
+.footer {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
